@@ -1,7 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using WebApp.Context;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<DataContext>(opt => opt.UseSqlServer("Data Source=DESKTOP-Q3S7IU9; Initial Catalog=Formulario; User ID=sa; Password=12345; Encrypt=False;"));
 
 var app = builder.Build();
 
