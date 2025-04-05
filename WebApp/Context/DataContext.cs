@@ -9,11 +9,12 @@ namespace WebApp.Context
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
         public DbSet<Cliente> Clientes { get; set; }
-
+        public DbSet<Endereco> Enderecos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new ClienteConfig());   
+            modelBuilder.ApplyConfiguration(new ClienteConfig()); 
+            modelBuilder.ApplyConfiguration(new EnderecoConfig());
         }
     }
 }
