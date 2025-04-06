@@ -1,0 +1,20 @@
+﻿@model WebApp.ViewModels.ClienteViewModel
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<form action="Editar" method="post">
+    <input name="Id" hidden value="@Model.Id"/>
+    <label>Nome</label>
+    <input type="text" name="Nome" value="@Model.Nome"/>
+    <label>Sobrenome</label>
+    <input type="text" name="Sobrenome" value="@Model.Sobrenome" />
+    <label>Idade</label>
+    <input type="date" name="DataNascimento" value="@Model.DataNascimento" />
+    <label>CPF</label>
+    <input type="text" name="Cpf" value="@Model.Cpf" />
+    <label>Email</label>
+    <input type="text" name="Email" value="@Model.Email" />
+    <button type="submit">Salvar</button>
+</form>
