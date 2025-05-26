@@ -1,0 +1,29 @@
+﻿@model IEnumerable<EnderecoViewModel>
+<a asp-action="CadastroEndereco" asp-controller="Endereco">Novo Endereco</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Rua</th>
+            <th scope="col">Bairro</th>
+            <th scope="col">Cep</th>
+            <th scope="col">Numero</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var endereco in Model)
+        {
+            <tr>
+                <th scope="row">@endereco.Rua</th>
+                <td>@endereco.Bairro</td>
+                <td>@endereco.Cep</td>
+                <td>@endereco.Numero</td>
+                <td>
+                    <a asp-action="EditarEnd" asp-controller="Endereco" asp-route-id="@endereco.Id">Editar</a>
+                    <a asp-action="ExcluirEnd" asp-controller="Endereco" asp-route-id="@endereco.Id">Excluir</a>
+                    <a asp-action="DetalheEnd" asp-controller="Endereco" asp-route-id="@endereco.Id">Detalhes</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

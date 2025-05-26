@@ -88,7 +88,8 @@ namespace WebApp.Controllers
         public IActionResult Detalhe(int id) 
         {
             var cliente = _dataContext.Clientes.FirstOrDefault(x => x.Id == id);
-            var clienteViewModel = new ClienteViewModel {
+            var clienteViewModel = new ClienteViewModel 
+            {
                 Id = cliente.Id,
                 Nome = cliente.Nome,
                 Sobrenome = cliente.Sobrenome,
