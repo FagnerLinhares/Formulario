@@ -1,0 +1,31 @@
+﻿@model EnderecoViewModel
+
+<div class="card-body">
+		<div asp-validation-summary="ModelOnly"></div>
+		<div class="mb-3">
+
+			<label asp-for="Rua"></label>
+			<input asp-for="Rua" placeholder="Nome Completo" class="form-control" />
+			<span asp-validation-for="Rua" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Bairro"></label>
+			<input asp-for="Bairro" class="form-control" />
+		<span asp-validation-for="Bairro" class="text-danger"></span>
+
+		</div><div class="mb-3">
+			<label asp-for="Cep"></label>
+			<input asp-for="Cep" class="form-control" />
+		<span asp-validation-for="Cep" class="text-danger"></span>
+
+		</div><div class="mb-3">
+			<label asp-for="Numero"></label>
+			<input asp-for="Numero" class="form-control" />
+		<span asp-validation-for="Numero" class="text-danger"></span>
+
+		</div>
+		</div>
+		<div class="card-footer text-muted">
+			<a asp-action="Index" class="btn btn-outline-danger">Cancelar</a>
+			<button type="submit" class="btn btn-success">Salvar</button>
+		</div>

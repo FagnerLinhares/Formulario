@@ -1,7 +1,7 @@
 ﻿@model WebApp.ViewModels.EnderecoViewModel
 
 @{
-    ViewData["Title"] = "DetalheEnd";
+    ViewData["Title"] = "Detalhe";
 }
 
 <h1>Detalhe</h1>
@@ -12,7 +12,6 @@
     <dl class="row">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Id)
-
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Id)
@@ -44,7 +43,7 @@
     </dl>
 </div>
 <div>
-    <a asp-action="EditarEnd" asp-controller="Endereco" asp-route-id="@Model.Id">Editar</a>
+    <a asp-action="Editar" asp-controller="Endereco" asp-route-id="@Model.Id">Editar</a>
     <br />
-    <a asp-action="Index1">Voltar</a>
+    <a asp-action="Index">Voltar</a>
 </div>

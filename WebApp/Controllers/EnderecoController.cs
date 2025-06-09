@@ -15,7 +15,7 @@ namespace WebApp.Controllers
             _dataContext = dataContext;
         }
 
-        public IActionResult Index1()
+        public IActionResult Index()
         {
             var listaEnderecoBanco = _dataContext.Enderecos.ToList();
             var listaEnderecoViewModel = new List<EnderecoViewModel>();
@@ -34,10 +34,21 @@ namespace WebApp.Controllers
             return View(listaEnderecoViewModel);
         }
 
-        public IActionResult EditarEnd(int id)
+        public IActionResult Editar(int id)
         {
+            if (id == 0)
+            {
+                return RedirectToAction("Index");
+            }
+
             var endereco = _dataContext.Enderecos.FirstOrDefault(c => c.Id == id);
+            if (endereco == null)
+            {
+                return RedirectToAction("Index");
+            }
+
             var enderecoViewModel = new EnderecoViewModel
+            
             {
                 Id = endereco.Id,
                 Rua = endereco.Rua,
@@ -51,17 +62,64 @@ namespace WebApp.Controllers
 
 
         [HttpGet]
-        public IActionResult CadastroEndereco()
+        public IActionResult Cadastro()
         {
             return View();
         }
 
+        /*
+        [HttpPost]
+public IActionResult Editar(EnderecoViewModel enderecoViewModel)
+{
+    if (!ModelState.IsValid)
+        return View(enderecoViewModel);
+
+    if (enderecoViewModel.Id <= 0)
+        return BadRequest("ID inválido.");
+
+    var enderecoBancoAntigo = _dataContext.Enderecos.FirstOrDefault(c => c.Id == enderecoViewModel.Id);
+    if (enderecoBancoAntigo == null)
+        return NotFound();
+
+    enderecoBancoAntigo.Rua = enderecoViewModel.Rua;
+    enderecoBancoAntigo.Bairro = enderecoViewModel.Bairro;
+    enderecoBancoAntigo.Cep = enderecoViewModel.Cep;
+    enderecoBancoAntigo.Numero = enderecoViewModel.Numero;
+
+    try
+    {
+        _dataContext.Enderecos.Update(enderecoBancoAntigo);
+        _dataContext.SaveChanges();
+        return RedirectToAction("Index");
+    }
+    catch (Exception ex)
+    {
+        ModelState.AddModelError("", "Erro ao atualizar o endereço.");
+        return View(enderecoViewModel);
+    }
+}
+        */
+
+
         //Recebe Dados
         [HttpPost]
-        public IActionResult EditarEnd(EnderecoViewModel enderecoViewModel)
-        {
+        public IActionResult Editar(EnderecoViewModel enderecoViewModel)
+        {       
+            if (!ModelState.IsValid)
+            {
+                return View(enderecoViewModel);
+            }
+
+            if (enderecoViewModel.Id <= 0)
+            {
+                return BadRequest("ID ou Cadastro não encontrado.");
+            }
 
             var enderecoBancoAntigo = _dataContext.Enderecos.FirstOrDefault(c => c.Id == enderecoViewModel.Id);
+            if (enderecoBancoAntigo == null)
+            { 
+                return BadRequest("O ID passado é Inválido.");
+            }
 
             enderecoBancoAntigo.Rua = enderecoViewModel.Rua;
             enderecoBancoAntigo.Bairro = enderecoViewModel.Bairro;
@@ -72,22 +130,35 @@ namespace WebApp.Controllers
 
             _dataContext.SaveChanges();
 
-            return RedirectToAction("Index1");
+            return RedirectToAction("Index");
 
         }
 
-        public IActionResult ExcluirEnd(int id)
+        public IActionResult Excluir(int id)
         {
+            
             var endereco = _dataContext.Enderecos.FirstOrDefault(x => x.Id == id);
+            
             _dataContext.Enderecos.Remove(endereco);
 
             _dataContext.SaveChanges();
-            return RedirectToAction("Index1");
+            return RedirectToAction("Index");
         }
 
-        public IActionResult DetalheEnd(int id)
+        public IActionResult Detalhe(int id)
         {
+            if (id == 0)
+            {
+                return RedirectToAction("Index");
+            }
+
             var endereco = _dataContext.Enderecos.FirstOrDefault(x => x.Id == id);
+            if (endereco == null)
+            {
+                return RedirectToAction("Index");
+            }
+                
+
             var enderecoViewModel = new EnderecoViewModel
             {
                 Id = endereco.Id,
@@ -100,9 +171,24 @@ namespace WebApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult CadastroEndereco(EnderecoViewModel model)
+        public IActionResult Cadastro(EnderecoViewModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            if (model == null)
+            {
+                return RedirectToAction("Cadastro");
+            }
+
             var newendereco = new Endereco();
+
+            if (newendereco == null)
+            {
+                return RedirectToAction("Cadastro");
+            }
 
             newendereco.Rua = model.Rua;
             newendereco.Bairro = model.Bairro;
@@ -112,7 +198,7 @@ namespace WebApp.Controllers
             _dataContext.Enderecos.Add(newendereco);
             _dataContext.SaveChanges();
 
-            return RedirectToAction("Index1");
+            return RedirectToAction("Index");
         }
     }
 

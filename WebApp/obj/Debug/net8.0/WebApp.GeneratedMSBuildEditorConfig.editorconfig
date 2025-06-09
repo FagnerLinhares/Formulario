@@ -44,20 +44,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Fagner/Desktop/Projetos TI/Formulario/WebApp/Views/Endereco/CadastroEndereco.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5kZXJlY29cQ2FkYXN0cm9FbmRlcmVjby5jc2h0bWw=
+[C:/Users/Fagner/Desktop/Projetos TI/Formulario/WebApp/Views/Cliente/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxfRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Fagner/Desktop/Projetos TI/Formulario/WebApp/Views/Endereco/DetalheEnd.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5kZXJlY29cRGV0YWxoZUVuZC5jc2h0bWw=
+[C:/Users/Fagner/Desktop/Projetos TI/Formulario/WebApp/Views/Endereco/Cadastro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5kZXJlY29cQ2FkYXN0cm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Fagner/Desktop/Projetos TI/Formulario/WebApp/Views/Endereco/EditarEnd.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5kZXJlY29cRWRpdGFyRW5kLmNzaHRtbA==
+[C:/Users/Fagner/Desktop/Projetos TI/Formulario/WebApp/Views/Endereco/Detalhe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5kZXJlY29cRGV0YWxoZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Fagner/Desktop/Projetos TI/Formulario/WebApp/Views/Endereco/Index1.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5kZXJlY29cSW5kZXgxLmNzaHRtbA==
+[C:/Users/Fagner/Desktop/Projetos TI/Formulario/WebApp/Views/Endereco/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5kZXJlY29cRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Fagner/Desktop/Projetos TI/Formulario/WebApp/Views/Endereco/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5kZXJlY29cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Fagner/Desktop/Projetos TI/Formulario/WebApp/Views/Endereco/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5kZXJlY29cX0Zvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Fagner/Desktop/Projetos TI/Formulario/WebApp/Views/Home/Index.cshtml]

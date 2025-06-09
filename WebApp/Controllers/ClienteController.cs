@@ -37,6 +37,7 @@ namespace WebApp.Controllers
 
         public IActionResult Editar(int id)
         {
+            
             var cliente = _dataContext.Clientes.FirstOrDefault(c => c.Id == id);
             var clienteViewModel = new ClienteViewModel
             {
@@ -59,7 +60,10 @@ namespace WebApp.Controllers
 
         [HttpPost]
         public IActionResult Editar(ClienteViewModel clienteViewModel) {
-            
+
+
+            if (!ModelState.IsValid) return View(clienteViewModel);
+
             var clienteBancoAntigo = _dataContext.Clientes.FirstOrDefault(c => c.Id == clienteViewModel.Id);
 
             clienteBancoAntigo.Nome = clienteViewModel.Nome;
@@ -104,6 +108,11 @@ namespace WebApp.Controllers
         [HttpPost]
         public IActionResult Cadastro(ClienteViewModel viewModel)
         {
+            if(!ModelState.IsValid)
+            {
+                return View(viewModel);
+            }
+
             //Transferiu Dados da ViewModel para a entidade CLiente
             var newcliente = new Cliente();
 
