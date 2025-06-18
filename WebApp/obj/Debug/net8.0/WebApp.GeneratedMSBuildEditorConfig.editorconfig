@@ -44,8 +44,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Fagner/Desktop/Projetos TI/Formulario/WebApp/Views/Cliente/_Form.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxfRm9ybS5jc2h0bWw=
+[C:/Users/Fagner/Desktop/Projetos TI/Formulario/WebApp/Views/Cliente/_FormCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxfRm9ybUNsaWVudGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Fagner/Desktop/Projetos TI/Formulario/WebApp/Views/Cliente/_FormEndereco.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxfRm9ybUVuZGVyZWNvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Fagner/Desktop/Projetos TI/Formulario/WebApp/Views/Endereco/Cadastro.cshtml]
@@ -74,6 +78,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Fagner/Desktop/Projetos TI/Formulario/WebApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Fagner/Desktop/Projetos TI/Formulario/WebApp/Views/Portfólio/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9ydGbDs2xpb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Fagner/Desktop/Projetos TI/Formulario/WebApp/Views/Shared/Error.cshtml]

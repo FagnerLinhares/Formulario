@@ -27,5 +27,8 @@ namespace WebApp.ViewModels
         [Required(ErrorMessage = "Campo Obrigatório!")]
         [MaxLength(50)]
         public string? Email { get; set; }
+
+
+        public EnderecoViewModel? EnderecoViewModel { get; set; }
     }
 }

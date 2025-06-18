@@ -16,6 +16,9 @@ namespace WebApp.Context.Configs
             builder.Property(c => c.DataNascimento).HasColumnType("Date");
             builder.Property(c => c.Cpf).IsRequired().HasMaxLength(14);
             builder.Property(c => c.Email).HasMaxLength(50);
+
+            //Muitos Endereços para um cliente
+            builder.HasMany(c => c.Enderecos).WithOne(c => c.Cliente).HasForeignKey(c => c.ClienteId);
         }
     }
 }

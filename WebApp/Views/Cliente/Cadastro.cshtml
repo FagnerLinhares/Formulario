@@ -1,13 +1,22 @@
 ﻿@model ClienteViewModel
-
+@{
+	var clienteViewModel = Model;
+}
 
 <div class="card">
 	<div class="card-header">
 		<h1>Cadastrar Cliente</h1>
 	</div>
 	<form asp-action="Cadastro">
-		<partial name="_Form"/>
-		
+		<div class="card-body">
+			<partial name="_FormCliente" model="clienteViewModel" />
+			<partial name="_FormEndereco" model="clienteViewModel?.EnderecoViewModel" />
+
+			<div class="card-footer text-muted">
+				<a asp-action="Index" asp-controller="Cliente" class="btn btn-outline-danger">Cancelar</a>
+				<button type="submit" class="btn btn-success">Salvar</button>
+			</div>
+		</div>	
 	</form>
 </div>
 

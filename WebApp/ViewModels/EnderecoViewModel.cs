@@ -14,14 +14,14 @@ namespace WebApp.ViewModels
         [MaxLength(30, ErrorMessage = "Campo máximo de {0}")]
         [Display(Name = "Bairro")]
         [Required(ErrorMessage = "Campo Obrigatório!")]
-        public string? Bairro { get; set; }
+        public string? Bairro { get; set; } 
 
-        [MaxLength(10)]
+        [MaxLength(8)]
         [Display(Name = "CEP" )]
         [Required(ErrorMessage = "Campo Obrigatório!")]
         public string? Cep { get; set; }
-
-        [StringLength(5, ErrorMessage = "Número máximo de 5 caracteres")]
+                
+        [Range(1, 99999, ErrorMessage = "Número máximo de 5 caracteres")]
         [Display(Name = "Número")]
         [Required(ErrorMessage = "Campo Obrigatório!")]
         public int Numero {  get; set; }

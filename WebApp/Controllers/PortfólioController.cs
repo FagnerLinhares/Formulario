@@ -1,0 +1,160 @@
+﻿using Humanizer;
+using Microsoft.AspNetCore.Components.Routing;
+using System.Drawing.Printing;
+using System.Drawing;
+using System.Runtime.InteropServices;
+using System.Runtime.Intrinsics.Arm;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.Elfie.Serialization;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
+using static System.Collections.Specialized.BitVector32;
+using static System.Net.Mime.MediaTypeNames;
+using NuGet.Protocol.Plugins;
+using System.IO;
+using System.Security.Policy;
+using System;
+using System.Reflection.PortableExecutable;
+
+namespace WebApp.Controllers
+{
+    public class PortfólioController : Controller
+    {
+
+        public IActionResult Index()
+        {
+                
+            return View();
+        }
+    }
+}
+
+/*
+< !DOCTYPE html >
+< html lang = "pt-BR" >
+< head >
+  < meta charset = "UTF-8" />
+  < meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
+  < title > A Luz do Parto - Apoio ao Parto Humanizado</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans - serif;
+margin: 0;
+padding: 0;
+background - color: #fffaf7;
+      color: #333;
+    }
+
+    header {
+      background-color: #fcd5ce;
+      padding: 1rem 2rem;
+text - align: center;
+    }
+
+    header h1
+{
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav {
+      background-color: #f8edeb;
+      display: flex;
+justify - content: center;
+gap: 2rem;
+padding: 1rem 0;
+    }
+
+    nav a
+{
+    text-decoration: none;
+    color: #5e3023;
+      font-weight: bold;
+}
+
+section {
+      padding: 2rem;
+max - width: 900px;
+margin: auto;
+    }
+
+    .intro {
+      text-align: center;
+    }
+
+    .intro h2
+{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+    .services, .about, .contact {
+      margin-top: 3rem;
+    }
+
+    .services ul
+{
+    list-style: none;
+    padding: 0;
+}
+
+    .services li
+{
+    background-color: #ffe5d9;
+      margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+footer {
+      background-color: #fcd5ce;
+      text - align: center;
+padding: 1rem;
+margin - top: 4rem;
+    }
+  </ style >
+</ head >
+< body >
+  < header >
+    < h1 > A Luz do Parto</h1>
+    <p>Presença, escuta e cuidado para um parto respeitoso</p>
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section class= "intro" >
+    < h2 > Bem - vinda, mamãe! </ h2 >
+    < p > Sou Mariana, doula apaixonada por acompanhar nascimentos com acolhimento e empatia.</p>
+  </section>
+
+  <section class= "about" id = "sobre" >
+    < h2 > Sobre Mim </ h2 >
+    < p > Na < strong > A Luz do Parto</strong>, ofereço acompanhamento com amor e respeito para que você se sinta segura em todas as fases da gestação. Tenho mais de 5 anos de experiência como doula e já acompanhei dezenas de nascimentos transformadores.</p>
+  </section>
+
+  <section class= "services" id = "servicos" >
+    < h2 > Meus Serviços </ h2 >
+    < ul >
+      < li > Acompanhamento pré - natal com escuta ativa</li>
+      <li>Presença no trabalho de parto e parto</li>
+      <li>Massagens, técnicas de alívio da dor e apoio emocional</li>
+      <li>Consultoria pós-parto e amamentação</li>
+    </ul>
+  </section>
+
+  <section class= "contact" id = "contato" >
+    < h2 > Entre em Contato</h2>
+    <p>💌 Email: doulamariana @gmail.com </ p >
+    < p >📱 WhatsApp: (11) 91234 - 5678 </ p >
+    < p >📍 Atendimento presencial em São Paulo e online para todo o Brasil</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 A Luz do Parto. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
+*/
